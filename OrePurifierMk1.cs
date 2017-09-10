@@ -144,10 +144,10 @@ public class OrePurifierMk1 : MachineEntity, PowerConsumerInterface
         if (this.meState == OrePurifierMk1.eState.eCrafting && this.mrCraftingTimer <= 0f)
         {
             this.mrCraftingTimer = 15f;
-            if (DifficultySettings.mbCasualResource)
-            {
-                this.mrCraftingTimer = 5f;
-            }
+            //if (DifficultySettings.mbCasualResource)
+            // {
+            //    this.mrCraftingTimer = 5f;
+            // }
         }
     }
 
@@ -441,11 +441,13 @@ public class OrePurifierMk1 : MachineEntity, PowerConsumerInterface
     #endregion
     public override string GetPopupText()
     {
-     string text = "Resin Storage: " + this.mResinStorage;
-        text += "\n" + this.meState;
+        string text = "Resin Storage: " + this.mResinStorage;
+        text += "\nPower: " + this.mrCurrentPower + "/" + this.mrMaxPower; 
+        if(this.meState != eState.eCrafting)
+            text += "\n" + this.meState;
         if(this.meState == eState.eCrafting)
         {
-            text += "\n s" + this.mTarget;
+            text += "\nCrafting:" + this.mTarget + " " + mrCraftingTimer + "s remaining";
         }
 
 
