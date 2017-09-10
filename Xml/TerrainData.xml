@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTerrainDataEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<TerrainDataEntry>
+		<Key>Nedrith.OrePurifierMk1</Key>
+		<Name>Ore Purifier Mk1</Name>
+		<IconName>Research Assembler</IconName>
+		<LayerType>PrimaryTerrain</LayerType>
+		<TopTexture>191</TopTexture>
+		<SideTexture>191</SideTexture>
+		<BottomTexture>191</BottomTexture>
+		<GUITexture>191</GUITexture>
+		<isSolid>false</isSolid>
+		<isTransparent>true</isTransparent>
+		<isHollow>false</isHollow>
+		<isGlass>false</isGlass>
+		<isPassable>false</isPassable>
+		<hasObject>true</hasObject>
+		<hasEntity>true</hasEntity>
+		<Category>Machine</Category>
+		<AudioWalkType>Metal</AudioWalkType>
+		<AudioBuildType>Dirt</AudioBuildType>
+		<AudioDestroyType>None</AudioDestroyType>
+		<tags>
+			<tag>Machinery</tag>
+		</tags>
+	</TerrainDataEntry>	
+		<TerrainDataEntry>
+		<Key>GenericAssemblerMachine</Key>
+		<IsOverride>true</IsOverride>
+		<Values>
+			<ValueEntry>
+				<Key>Nedrith.ResinedCopperOre</Key>
+				<Name>Resined Copper Ore</Name>
+				<IconName>Wooden Planks</IconName>
+				<Description>Ore cleaned with resin</Description>
+			</ValueEntry>
+		</Values>
+	</TerrainDataEntry>
+		<TerrainDataEntry>
+		<Key>GenericAssemblerMachine</Key>
+		<IsOverride>true</IsOverride>
+		<Values>
+			<ValueEntry>
+				<Key>Nedrith.ResinedTinOre</Key>
+				<Name>Resined Tin Ore</Name>
+				<IconName>Wooden Planks</IconName>
+				<Description>Ore cleaned with resin</Description>
+			</ValueEntry>
+		</Values>
+	</TerrainDataEntry>
+		<TerrainDataEntry>
+		<Key>GenericAssemblerMachine</Key>
+		<IsOverride>true</IsOverride>
+		<Values>
+			<ValueEntry>
+				<Key>Nedrith.ResinedIronOre</Key>
+				<Name>Resined Iron Ore</Name>
+				<IconName>Wooden Planks</IconName>
+				<Description>Ore cleaned with resin</Description>
+			</ValueEntry>
+		</Values>
+	</TerrainDataEntry>
+		<TerrainDataEntry>
+		<Key>GenericAssemblerMachine</Key>
+		<IsOverride>true</IsOverride>
+		<Values>
+			<ValueEntry>
+				<Key>Nedrith.ResinedLithiumOre</Key>
+				<Name>Resined Lithium Ore</Name>
+				<IconName>Wooden Planks</IconName>
+				<Description>Ore cleaned with resin</Description>
+			</ValueEntry>
+		</Values>
+	</TerrainDataEntry>
+		<TerrainDataEntry>
+		<Key>GenericAssemblerMachine</Key>
+		<IsOverride>true</IsOverride>
+		<Values>
+			<ValueEntry>
+				<Key>Nedrith.ResinedNickelOre</Key>
+				<Name>Resined Nickel Ore</Name>
+				<IconName>Wooden Planks</IconName>
+				<Description>Ore cleaned with resin</Description>
+			</ValueEntry>
+		</Values>
+	</TerrainDataEntry>
+		<TerrainDataEntry>
+		<Key>GenericAssemblerMachine</Key>
+		<IsOverride>true</IsOverride>
+		<Values>
+			<ValueEntry>
+				<Key>Nedrith.ResinedGoldOre</Key>
+				<Name>Resined Gold Ore</Name>
+				<IconName>Wooden Planks</IconName>
+				<Description>Ore cleaned with resin</Description>
+			</ValueEntry>
+		</Values>
+	</TerrainDataEntry>
+		<TerrainDataEntry>
+		<Key>GenericAssemblerMachine</Key>
+		<IsOverride>true</IsOverride>
+		<Values>
+			<ValueEntry>
+				<Key>Nedrith.ResinedTitaniumOre</Key>
+				<Name>Resined Titanium Ore</Name>
+				<IconName>Wooden Planks</IconName>
+				<Description>Ore cleaned with resin</Description>
+			</ValueEntry>
+		</Values>
+	</TerrainDataEntry>
+		<TerrainDataEntry>
+		<Key>GenericAssemblerMachine</Key>
+		<IsOverride>true</IsOverride>
+		<Values>
+			<ValueEntry>
+				<Key>Nedrith.ResinedChromiumOre</Key>
+				<Name>Resined Chromium Ore</Name>
+				<IconName>Wooden Planks</IconName>
+				<Description>Ore cleaned with resin</Description>
+			</ValueEntry>
+		</Values>
+	</TerrainDataEntry>
+		<TerrainDataEntry>
+		<Key>GenericAssemblerMachine</Key>
+		<IsOverride>true</IsOverride>
+		<Values>
+			<ValueEntry>
+				<Key>Nedrith.ResinedMolybdenumOre</Key>
+				<Name>Resined Molybdenum Ore</Name>
+				<IconName>Wooden Planks</IconName>
+				<Description>Ore cleaned with resin</Description>
+			</ValueEntry>
+		</Values>
+	</TerrainDataEntry>
+</ArrayOfTerrainDataEntry>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfItemEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<ItemEntry>
+		<Key>Nedrith.ResinedTinOre</Key>
+		<Name>Resined Tin Ore</Name>
+		<Plural>Resined Tin Ores</Plural>
+		<Type>ItemStack</Type>
+		<!-- <Object>BarIron</Object> -->
+		<Object>BarIron</Object>
+		<Sprite>Iron Bar</Sprite>
+		<Category>CraftingIngredient</Category>
+	</ItemEntry>	
+</ArrayOfItemEntry>

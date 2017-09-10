@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCraftData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CraftData>
+		<Key>Nedrith.tinbar</Key>
+		<CraftedKey>TinBar</CraftedKey>
+		<CraftedAmount>1</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>Nedrith.ResinedTinOre</Key>
+				<Amount>16</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Tin bars are refined Tin usable for crafting.</Description>
+		<ScanRequirements>
+			<Scan>TinOre</Scan>
+		</ScanRequirements>
+	</CraftData>
+</ArrayOfCraftData>

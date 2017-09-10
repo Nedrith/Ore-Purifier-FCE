@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCraftData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CraftData>
+		<Key>Nedrith.OrePurifierMk1</Key>
+		<Category>Manufacturing</Category>
+		<CraftedKey>Nedrith.OrePurifierMk1</CraftedKey>
+		<CraftedAmount>1</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>Snow</Key>
+				<Amount>1</Amount>
+			</CraftCost>
+		</Costs>
+		<ResearchRequirements>
+			<Research></Research>
+		</ResearchRequirements>
+		<Description>Uses Refined Liquid Resin to remove most unusable pieces from ore.</Description>
+		<Hint>Feed Refined Resin and power to gain additional bars when smelting!</Hint>
+	</CraftData>
+	<CraftData>
+		<Key>Nedrith.RefinedLiquidResin</Key>
+		<Category>Manufacturing</Category>
+		<CraftedKey>RefinedLiquidResin</CraftedKey>
+		<CraftedAmount>100</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>Snow</Key>
+				<Amount>1</Amount>
+			</CraftCost>
+		</Costs>
+		<ResearchRequirements>
+			<Research></Research>
+		</ResearchRequirements>
+		<Description>Uses Refined Liquid Resin to remove most unusable pieces from ore.</Description>
+		<Hint>Feed Refined Resin and power to gain additional bars when smelting!</Hint>
+	</CraftData>
+	<CraftData>
+		<Key>Nedrith.Snow</Key>
+		<Category>Manufacturing</Category>
+		<CraftedKey>Snow</CraftedKey>
+		<CraftedAmount>100</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>Snow</Key>
+				<Amount>1</Amount>
+			</CraftCost>
+		</Costs>
+		<ResearchRequirements>
+			<Research></Research>
+		</ResearchRequirements>
+		<Description>Uses Refined Liquid Resin to remove most unusable pieces from ore.</Description>
+		<Hint>Feed Refined Resin and power to gain additional bars when smelting!</Hint>
+	</CraftData>
+<CraftData>
+		<Key>Nedrith.ResinedCopperOre</Key>
+		<Category>Manufacturing</Category>
+		<CraftedKey>Nedrith.ResinedCopperOre</CraftedKey>
+		<CraftedAmount>1</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>CopperOre</Key>
+				<Amount>1</Amount>
+			</CraftCost>
+		</Costs>
+		<ResearchRequirements>
+			<Research></Research>
+		</ResearchRequirements>
+		<Description>Uses Refined Liquid Resin to remove most unusable pieces from ore.</Description>
+		<Hint>Feed Refined Resin and power to gain additional bars when smelting!</Hint>
+	</CraftData>
+</ArrayOfCraftData>	

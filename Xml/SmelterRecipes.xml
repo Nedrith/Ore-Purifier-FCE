@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCraftData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CraftData>
+		<Key>Nedrith.tinbarR</Key>
+		<CraftedKey>TinBar</CraftedKey>
+		<CraftedAmount>1</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>Nedrith.ResinedTinOre</Key>
+				<Amount>16</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Tin bars are refined Tin usable for crafting.</Description>
+		<ScanRequirements>
+			<Scan>TinOre</Scan>
+		</ScanRequirements>
+	</CraftData>
+		<CraftData>
+		<Key>Nedrith.CopperbarR</Key>
+		<CraftedKey>CopperBar</CraftedKey>
+		<CraftedAmount>1</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>Nedrith.ResinedCopperOre</Key>
+				<Amount>16</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Copper bars are refined Copper usable for crafting.</Description>
+		<ScanRequirements>
+			<Scan>CopperOre</Scan>
+		</ScanRequirements>
+	</CraftData>
+		<CraftData>
+		<Key>Nedrith.ironbarR</Key>
+		<CraftedKey>IronBar</CraftedKey>
+		<CraftedAmount>1</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>Nedrith.ResinedIronOre</Key>
+				<Amount>16</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Iron bars are refined Iron usable for crafting.</Description>
+		<ScanRequirements>
+			<Scan>IronOre</Scan>
+		</ScanRequirements>
+	</CraftData>
+		<CraftData>
+		<Key>Nedrith.lithiumbarR</Key>
+		<CraftedKey>LithiumBar</CraftedKey>
+		<CraftedAmount>1</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>Nedrith.ResinedLithiumOre</Key>
+				<Amount>16</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Lithium bars are refined Lithium usable for crafting.</Description>
+		<ScanRequirements>
+			<Scan>LithiumOre</Scan>
+		</ScanRequirements>
+	</CraftData>
+		<CraftData>
+		<Key>Nedrith.goldbarR</Key>
+		<CraftedKey>GoldBar</CraftedKey>
+		<CraftedAmount>1</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>Nedrith.ResinedGoldOre</Key>
+				<Amount>16</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Gold bars are refined Gold usable for crafting.</Description>
+		<ScanRequirements>
+			<Scan>GoldOre</Scan>
+		</ScanRequirements>
+	</CraftData>
+		<CraftData>
+		<Key>Nedrith.titaniumbarR</Key>
+		<CraftedKey>TitaniumBar</CraftedKey>
+		<CraftedAmount>1</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>Nedrith.ResinedTitaniumOre</Key>
+				<Amount>16</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Titanium bars are refined Titanium usable for crafting.</Description>
+		<ScanRequirements>
+			<Scan>TitaniumOre</Scan>
+		</ScanRequirements>
+	</CraftData>
+		<CraftData>
+		<Key>Nedrith.nickelbarR</Key>
+		<CraftedKey>NickelBar</CraftedKey>
+		<CraftedAmount>1</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>Nedrith.ResinedNickelOre</Key>
+				<Amount>16</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Nickel bars are refined Nickel usable for crafting.</Description>
+		<ScanRequirements>
+			<Scan>NickelOre</Scan>
+		</ScanRequirements>
+	</CraftData>
+</ArrayOfCraftData>

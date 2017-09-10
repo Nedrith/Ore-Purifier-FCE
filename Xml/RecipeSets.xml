@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfRecipeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<RecipeSet>
+		<Id>OrePurifierMk1</Id>
+		<Name>OrePurifierMk1</Name>
+		<FileName>Nedrith.OrePurifierMk1Recipes.xml</FileName>
+		<Icon>Blast Furnace</Icon>
+		<MachineKey>Nedrith.OrePurifierMk1</MachineKey>
+	</RecipeSet>	
+</ArrayOfRecipeSet>

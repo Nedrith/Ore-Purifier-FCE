@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCraftData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<CraftData>
+		<Key>Nedrith.ResinedTinOre</Key>
+		<CraftedKey>Nedrith.ResinedTinOre</CraftedKey>
+		<CraftedAmount>11</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>TinOre</Key>
+				<Amount>10</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Removes Impurities from tin using Refined Resin.</Description>
+	</CraftData>	
+	<CraftData>
+		<Key>Nedrith.ResinedCopperOre</Key>
+		<CraftedKey>Nedrith.ResinedCopperOre</CraftedKey>
+		<CraftedAmount>11</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>CopperOre</Key>
+				<Amount>10</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Removes Impurities from copper using Refined Resin.</Description>
+	</CraftData>	
+	<CraftData>
+		<Key>Nedrith.ResinedIronOre</Key>
+		<CraftedKey>Nedrith.ResinedIronOre</CraftedKey>
+		<CraftedAmount>11</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>IronOre</Key>
+				<Amount>10</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Removes Impurities from iron using Refined Resin.</Description>
+	</CraftData>	
+	<CraftData>
+		<Key>Nedrith.ResinedLithiumOre</Key>
+		<CraftedKey>Nedrith.ResinedLithiumOre</CraftedKey>
+		<CraftedAmount>11</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>LithiumOre</Key>
+				<Amount>10</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Removes Impurities from lithium using Refined Resin.</Description>
+	</CraftData>	
+	<CraftData>
+		<Key>Nedrith.ResinedGoldOre</Key>
+		<CraftedKey>Nedrith.ResinedGoldOre</CraftedKey>
+		<CraftedAmount>11</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>GoldOre</Key>
+				<Amount>10</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Removes Impurities from gold using Refined Resin.</Description>
+	</CraftData>	
+	<CraftData>
+		<Key>Nedrith.ResinedTitaniumOre</Key>
+		<CraftedKey>Nedrith.ResinedTitaniumOre</CraftedKey>
+		<CraftedAmount>11</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>TitaniumOre</Key>
+				<Amount>10</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Removes Impurities from titanium using Refined Resin.</Description>
+	</CraftData>	
+	<CraftData>
+		<Key>Nedrith.ResinedNickelOre</Key>
+		<CraftedKey>Nedrith.ResinedNickelOre</CraftedKey>
+		<CraftedAmount>11</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>NickelOre</Key>
+				<Amount>10</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Removes Impurities from nickel using Refined Resin.</Description>
+	</CraftData>	
+	<CraftData>
+		<Key>Nedrith.ResinedChromiumOre</Key>
+		<CraftedKey>Nedrith.ResinedChromiumOre</CraftedKey>
+		<CraftedAmount>11</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>ChromiumOre</Key>
+				<Amount>10</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Removes Impurities from chromium using Refined Resin.</Description>
+	</CraftData>	
+	<CraftData>
+		<Key>Nedrith.ResinedMolybdenumOre</Key>
+		<CraftedKey>Nedrith.ResinedMolybdenumOre</CraftedKey>
+		<CraftedAmount>11</CraftedAmount>
+		<Costs>
+			<CraftCost>
+				<Key>MolybdenumOre</Key>
+				<Amount>10</Amount>
+			</CraftCost>
+		</Costs>
+		<Description>Removes Impurities from molybdenum using Refined Resin.</Description>
+	</CraftData>	
+</ArrayOfCraftData>
