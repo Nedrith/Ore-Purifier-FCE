@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="OrePurifierMk1.cs" />
     <Compile Include="OrePurifierMod.cs" />
-    <Compile Include="OreSmelter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -72,7 +71,9 @@
     <Content Include="Xml\ManufacturerRecipes.xml" />
     <Content Include="Xml\Nedrith.OrePurifierMk1Recipes.xml" />
     <Content Include="Xml\New Text Document.xml" />
-    <Content Include="Xml\RecipeSets.xml" />
+    <Content Include="Xml\RecipeSets.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Xml\SmelterRecipes.xml" />
     <Content Include="Xml\SmelterRecipesss.xml" />
     <Content Include="Xml\TerrainData.xml" />

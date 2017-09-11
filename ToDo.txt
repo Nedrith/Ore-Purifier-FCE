@@ -2,20 +2,20 @@
 
 Add Resined ore to blast furnace
 	??small bonus to T1/2 resined ores in blast furnace??
-Ore purifiers need to save their stored resin amounts.
+--Ore purifiers need to save their stored resin amounts.--
 Add better information when mousing over purifiers
 	Add device Name
 	--Display crafting time--
-	--Display power information--
+	<<Display power information>>
 Rebalance OrePurifierMk1
-	Needs to take in less power
+	<<Needs to take in less power>>
 	Needs to take less time
 	An ore purifier should be able to spit out enough resined/clean ore on plentiful difficulty to sustain a single smelter's requirements with a mk3 forced induction on the smelter?
 Add OrePurifierMk2
 	Will take in Chlorine and Resined Ore and output extra Clean Ore
 	Clean Ore can be smelted in the blast furnace for a ??bonus?? or a smelter for regular amounts
 	??applies only to T4 ores??
-Add proper icons for all ores
+Add proper icons for all ores/machines
 
 
 
@@ -25,3 +25,4 @@ List is in priority order
 !!!!!text!!!!! Notes waiting on Game's developer to change something before completion
 ??text?? is a feature under consideration.  
 --text-- needs testing however the code should work.
+<<text>> is completed and verified

@@ -26,7 +26,7 @@ public class OrePurifierMod : FortressCraftMod
         if (parameters.Cube == OrePurifierMk1Cube)
         {
             parameters.ObjectType = SpawnableObjectEnum.OreSmelterBasic;
-            results.Entity = new OrePurifierMk1(parameters.Segment, parameters.X, parameters.Y, parameters.Z, parameters.Cube, parameters.Flags, parameters.Value, parameters.LoadFromDisk);
+            results.Entity = new OrePurifierMk1(parameters);
         }
     }
         

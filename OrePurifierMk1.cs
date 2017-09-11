@@ -21,6 +21,8 @@ public class OrePurifierMk1 : MachineEntity, PowerConsumerInterface
     }
     //Object's name in a attempt to increase code reusability
     public string Name = "OrePurifierMk1";
+
+    public const eSegmentEntity SEGMENT_ENTITY = eSegmentEntity.Mod;
     //Refined Liquid Resins Key
     public static int REFINEDRESIN = ItemEntry.GetIDFromKey("RefinedLiquidResin",true); 
     //The purifier's current state
@@ -34,17 +36,35 @@ public class OrePurifierMk1 : MachineEntity, PowerConsumerInterface
     public ItemCubeStack mTargetCreationCube;
     public string mTarget;
     //PPS the device requires
-    private float mrPowerPerSecond = 128f;
+    private float mrPowerPerSecond = 1f;
     //How long until crafting is complete
     public float mrCraftingTimer;
     //?????
-    private OrePurifierMk1.eState mUnityState;
+   // private OrePurifierMk1.eState mUnityState;
     //????
-    private MaterialPropertyBlock mMPB;
+   // private MaterialPropertyBlock mMPB;
 
-    private float mrGlow;
+   // private float mrGlow;
 
-    private Renderer mRend;
+   // private Renderer mRend;
+
+    private ParticleSystem CompletionParticles;
+
+    private ParticleSystem HeatParticles;
+
+   // private float mrTimeSinceSmelt;
+
+    private GameObject TextQuad;
+
+    private GameObject GlowObject;
+
+    private GameObject SmelterObj;
+
+    private Light GlowLight;
+
+    private TextMesh mReadout;
+
+    private int mnUnityUpdates;
     //What hoppers are attached to the machine
     private StorageMachineInterface[] maAttachedHoppers;
     //How many hoppers are attached
@@ -53,12 +73,12 @@ public class OrePurifierMk1 : MachineEntity, PowerConsumerInterface
     public int mResinStorage;
     public float mrCurrentPower;
     //Maximum amount of power the machine can have
-    public float mrMaxPower = 1500f;
+    public float mrMaxPower = 500f;
     //How quickly the machine can accept Power
     public float mrMaxTransferRate = 750f;
     //Constructor
 
-    public OrePurifierMk1(Segment segment, long x, long y, long z, ushort cube, byte flags, ushort lValue, bool loadFromDisk) : base(eSegmentEntity.Mod, SpawnableObjectEnum.ExperimentalAssembler, x, y, z, cube, flags, lValue, Vector3.zero, segment)
+    public OrePurifierMk1(ModCreateSegmentEntityParameters parameters) : base(parameters)
     {
        
         this.meState = OrePurifierMk1.eState.eLookingForResources;
@@ -67,6 +87,7 @@ public class OrePurifierMk1 : MachineEntity, PowerConsumerInterface
         this.mTargetCreation = null;
         this.maAttachedHoppers = new StorageMachineInterface[6];
         this.mResinStorage = 0;
+        this.mnUnityUpdates = 0;
     }
 
     public override void DropGameObject()
@@ -92,6 +113,103 @@ public class OrePurifierMk1 : MachineEntity, PowerConsumerInterface
             {
                 Debug.LogError("Ore Purifier missing game object #0 (GO)?");
             }
+            this.mReadout = this.mWrapper.mGameObjectList[0].transform.Search("ReadoutText").GetComponent<TextMesh>();
+            this.mbLinkedToGO = true;
+            this.CompletionParticles = this.mWrapper.mGameObjectList[0].transform.Search("SmeltCompleteParticles").GetComponent<ParticleSystem>();
+            this.HeatParticles = this.mWrapper.mGameObjectList[0].transform.Search("HeatParticles").GetComponent<ParticleSystem>();
+            this.GlowObject = this.mWrapper.mGameObjectList[0].transform.Search("SmelterGlow").gameObject;
+            this.GlowLight = this.mWrapper.mGameObjectList[0].transform.Search("Smelting Light").gameObject.GetComponent<Light>();
+            this.SmelterObj = this.mWrapper.mGameObjectList[0].transform.Search("Smelter").gameObject;
+            this.TextQuad = this.mWrapper.mGameObjectList[0].transform.Search("Quad").gameObject;
+        }
+        if (this.mnUnityUpdates % 60 == 0)
+        {
+            //this.ConfigLOD();
+
+            // if (this.mDotWithPlayerForwards > 0f)
+            // {
+            if (this.meState == eState.eLookingForResources)
+            {
+                this.mReadout.text = "Insert Ore to start";
+            }
+            else if (this.meState == eState.eCrafting)
+            {
+                this.mReadout.text = "Smelting...";
+            }
+            else
+            {
+                this.mReadout.text = "N/A";
+            }
+                /*
+                                    if (!string.IsNullOrEmpty(this.SmelterError))
+                                    {
+                                        TextMesh expr_6B5 = this.mReadout;
+                                        expr_6B5.text = expr_6B5.text + "\n" + this.SmelterError;
+                                    }
+                                    TextMesh expr_6D6 = this.mReadout;
+                                    expr_6D6.text = expr_6D6.text + "\n" + this.mrTemperature.ToString("F0") + "°C";
+                                    if (this.mOutputHopper != null && this.mOutputHopper.mnItemID != -1 && ItemEntry.mEntries[this.mOutputHopper.mnItemID] != null)
+                                    {
+                                        TextMesh expr_738 = this.mReadout;
+                                        string text = expr_738.text;
+                                        expr_738.text = string.Concat(new object[]
+                                        {
+                                        text,
+                                        "\n",
+                                        (this.mOutputHopper as ItemStack).mnAmount,
+                                        " ",
+                                        ItemEntry.mEntries[this.mOutputHopper.mnItemID].Plural
+                                        });
+                                    }*/
+          //  }
+
+
+            /*
+            if (!this.mbIsBehindPlayer)
+            {
+                this.GlowObject.GetComponent<Renderer>().enabled = true;
+                if (this.mrTemperature > 5f)
+                {
+                    this.GlowObject.SetActive(true);
+                    this.GlowLight.enabled = true;
+                    float num = this.mrTemperature / 550f;
+                    if (num > 1f)
+                    {
+                        num = 1f;
+                    }
+                    float num2 = this.mrTemperature / 1250f;
+                    if (num2 > 0.8f)
+                    {
+                        num2 = 0.8f;
+                    }
+                    this.GlowLight.color = new Color(num, num2, 0.1f, 1f);
+                    if (this.mrTargetTemp == 0f)
+                    {
+                        this.HeatParticles.emissionRate *= 0.95f;
+                    }
+                    else
+                    {
+                        this.HeatParticles.emissionRate = this.mrTemperature / this.mrTargetTemp * 250f / 2f;
+                    }
+                }
+                else
+                {
+                    this.HeatParticles.emissionRate = 0f;
+                    this.GlowObject.SetActive(false);
+                }
+            }
+            */
+            // else
+            //{
+            this.GlowLight.enabled = false;
+            this.GlowObject.SetActive(false);
+            this.HeatParticles.emissionRate = 0f;
+            this.GlowObject.GetComponent<Renderer>().enabled = false;
+            //  }
+        }
+            this.mnUnityUpdates++;
+    
+            /*
             this.mAnimation = this.mWrapper.mGameObjectList[0].GetComponentInChildren<Animation>();
             this.mAnimation.wrapMode = WrapMode.Loop;
             this.mUnityState = OrePurifierMk1.eState.eNumStates;
@@ -136,6 +254,7 @@ public class OrePurifierMk1 : MachineEntity, PowerConsumerInterface
             }
             this.mUnityState = this.meState;
         }
+        */
     }
 
     private void SetNewState(OrePurifierMk1.eState leNewState)
@@ -271,6 +390,10 @@ public class OrePurifierMk1 : MachineEntity, PowerConsumerInterface
             {
                 itemCount = this.maAttachedHoppers[i].CountItems(itemId);
             }
+            ItemBase item;
+            this.maAttachedHoppers[i].TryExtractAny(this, 1, out item);
+            GameManager.DoLocalChat(item.GetDisplayString() +":ID " + item.mnItemID +":Type " +item.mType);
+            this.maAttachedHoppers[i].TryInsert(this,item);
             //if it does extract the items, 
             if (itemCount >= recipe.Costs[0].Amount)
             {
@@ -279,14 +402,14 @@ public class OrePurifierMk1 : MachineEntity, PowerConsumerInterface
                 {
                     MaterialData.GetItemIdOrCubeValues(recipe.CraftedKey, out itemId, out cubeType, out cubeValue);
                     mTarget = recipe.CraftedKey;
-                    if (cubeType > 0)
-                    {
-                        this.mTargetCreationCube = ItemManager.SpawnCubeStack(cubeType, cubeValue, (int)recipe.CraftedAmount);
-                    }
-                    else
-                    {
+                  //  if (cubeType > 0)
+                   // {
+                    //    this.mTargetCreationCube = ItemManager.SpawnCubeStack(cubeType, cubeValue, (int)recipe.CraftedAmount);
+                   // }
+                   // else
+                   // {
                         this.mTargetCreation = ItemManager.SpawnItem(recipe);
-                    }
+                   // }
                     this.SetNewState(OrePurifierMk1.eState.eCrafting);
                     return true;
                 }
@@ -418,12 +541,25 @@ public class OrePurifierMk1 : MachineEntity, PowerConsumerInterface
         reader.ReadSingle();
         reader.ReadSingle();
         this.mTargetCreation = ItemFile.DeserialiseItem(reader);
+        this.mResinStorage = reader.ReadInt32();
+       // this.mTarget = reader.ReadString();
+        /*if (mTarget != null)
+        {
+            int itemId;
+            ushort cubeType;
+            ushort cubeValue;
+            MaterialData.GetItemIdOrCubeValues(mTarget, out itemId, out cubeType, out cubeValue);
+            if (cubeType > 0)
+            {
+                this.mTargetCreationCube = ItemManager.SpawnCubeStack(cubeType, cubeValue, reader.ReadInt32());
+            }
+        }*/
     }
 
     public override void Write(BinaryWriter writer)
     {
         float value = 0f;
-        writer.Write((int)this.meState);
+        writer.Write((int )this.meState);
         writer.Write(this.mrCurrentPower);
         writer.Write(this.mrCraftingTimer);
         writer.Write(value);
@@ -432,6 +568,9 @@ public class OrePurifierMk1 : MachineEntity, PowerConsumerInterface
         writer.Write(value);
         writer.Write(value);
         ItemFile.SerialiseItem(this.mTargetCreation, writer);
+        writer.Write(this.mResinStorage);
+        // mTargetCreationCube.Write(writer);
+        //writer.Write(mTarget);
     }
 
     public override bool ShouldNetworkUpdate()
@@ -447,7 +586,7 @@ public class OrePurifierMk1 : MachineEntity, PowerConsumerInterface
             text += "\n" + this.meState;
         if(this.meState == eState.eCrafting)
         {
-            text += "\nCrafting:" + this.mTarget + " " + mrCraftingTimer + "s remaining";
+            text += "\nCrafting:" + this.mTargetCreation.GetDisplayString() + "\n" + mrCraftingTimer.ToString("N1") + "s remaining";
         }
 
 

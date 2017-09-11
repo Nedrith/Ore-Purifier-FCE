@@ -3,12 +3,12 @@
 	<TerrainDataEntry>
 		<Key>Nedrith.OrePurifierMk1</Key>
 		<Name>Ore Purifier Mk1</Name>
-		<IconName>Research Assembler</IconName>
+		<IconName>Basic Ore Smelter</IconName>
 		<LayerType>PrimaryTerrain</LayerType>
-		<TopTexture>191</TopTexture>
-		<SideTexture>191</SideTexture>
-		<BottomTexture>191</BottomTexture>
-		<GUITexture>191</GUITexture>
+		<TopTexture>192</TopTexture>
+		<SideTexture>192</SideTexture>
+		<BottomTexture>192</BottomTexture>
+		<GUITexture>192</GUITexture>
 		<isSolid>false</isSolid>
 		<isTransparent>true</isTransparent>
 		<isHollow>false</isHollow>

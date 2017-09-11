@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nedrith.OrePurifier", "Nedrith.OrePurifier.csproj", "{0E849A39-C834-43CD-B33F-C55172DD5313}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "..\..\..\..\..\..\..\..\..\programming\FCFILES\Assembly-CSharp.csproj", "{D6D63EF7-0292-4DCC-BEF0-30D38672290F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0E849A39-C834-43CD-B33F-C55172DD5313}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E849A39-C834-43CD-B33F-C55172DD5313}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E849A39-C834-43CD-B33F-C55172DD5313}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D63EF7-0292-4DCC-BEF0-30D38672290F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D63EF7-0292-4DCC-BEF0-30D38672290F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D63EF7-0292-4DCC-BEF0-30D38672290F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D63EF7-0292-4DCC-BEF0-30D38672290F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
